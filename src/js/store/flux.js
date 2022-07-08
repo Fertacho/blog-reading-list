@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				fetch("https://www.swapi.tech/api/people")
   				.then(response => response.json())
-  				.then(result => setStore({characters:[store.characters,result[0].url]}))
+  				.then(result =>{console.log(result,"este es el fetch"), setStore({characters:[result.results]})})
   				.catch(error => console.log('error', error));
 			}
 		}
