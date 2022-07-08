@@ -12,7 +12,7 @@ export const Home = () => {
  return (
 	<div className="text-center mt-5">
 		{store.characters.map((characters,index)=>{
-return <p key={index}>{characters.name}</p>
+return <p key={index}>{characters.url}</p>
 		
 		})}
 	</div>
