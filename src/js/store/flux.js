@@ -5,7 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			person:[],
 			planets:[],
 			planet:[],
-			vehicles:[],
+			starships:[],
+			starship:[],
 			favorites:[],
 		},
 		actions: {
@@ -14,7 +15,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				fetch("https://www.swapi.tech/api/people")
   				.then(response => response.json())
-  				.then(result =>{console.log(result,"este es el fetch"), setStore({characters:[...result.results]})})
+  				.then(result =>{console.log(result,"este es el fetch de personas"), setStore({characters:[...result.results]})})
+  				.catch(error => console.log('error', error));
+			},
+			getPlanets:()=>{
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/planets")
+  				.then(response => response.json())
+  				.then(result =>{console.log(result,"este es el fetch de planetas"), setStore({planets:[...result.results]})})
+  				.catch(error => console.log('error', error));
+			},
+			getStarships:()=>{
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/starships")
+  				.then(response => response.json())
+  				.then(result =>{console.log(result,"este es el fetch de vehiculos"), setStore({starships:[...result.results]})})
   				.catch(error => console.log('error', error));
 			}
 		}
