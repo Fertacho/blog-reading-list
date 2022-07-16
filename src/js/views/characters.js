@@ -12,7 +12,7 @@ export const Characters = () => {
  return (
 	<div className="text-center row mt-5">
 		{store.characters.map((characters,index)=>{
-return <div className="card col-5"  key={index}><img src="..." className="card-img-top" alt="..."/><div className="card-body"><h5>{characters.name}</h5><button href="#" class="btn btn-primary">Go somewhere</button></div></div>
+return <div className="card col-5"  key={index}><img src="..." className="card-img-top" alt="..."/><div className="card-body"><h5>{characters.name}</h5><button href="#" class="btn btn-primary">Go somewhere</button><button href="#" class="btn btn-warning">♡</button></div></div>
 		})}
 	</div>
 )};
