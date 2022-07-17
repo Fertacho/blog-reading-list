@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planet:[],
 			starships:[],
 			starship:[],
-			favorites:[],
+			favorites:[]
 		},
 		actions: {
 			
