@@ -9,7 +9,8 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Characters } from "./views/characters";
 import { Planets } from "./views/planets";
-import { Starships, Vehicles, vehicles } from "./views/vehicles";
+import { Starships} from "./views/vehicles";
+import {Person} from "./views/sinCharacter";
 
 //create your first component
 const Layout = () => {
@@ -29,6 +30,7 @@ const Layout = () => {
 						<Route path={"/characters"} component={Characters}/>
 						<Route path={"/planets"} component={Planets}/>
 						<Route path={"/starships"} component={Starships}/>
+						<Route path={"/characters/:uid"} component={Person}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
