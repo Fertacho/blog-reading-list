@@ -31,6 +31,13 @@ const getState = ({ getStore, getActions, setStore }) => {
   				.then(response => response.json())
   				.then(result =>{console.log(result,"este es el fetch de vehiculos"), setStore({starships:[...result.results]})})
   				.catch(error => console.log('error', error));
+			},
+			getPerson:()=>{
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/people/:uid")
+  				.then(response => response.json())
+  				.then(result =>{console.log(result,"este es el fetch individual"), setStore({person:[...result.results]})})
+  				.catch(error => console.log('error', error));
 			}
 		}
 	};
