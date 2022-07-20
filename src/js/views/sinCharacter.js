@@ -1,9 +1,16 @@
 import React from "react";
 import { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export const Person = () => {
+    
+    const {store,actions} = useContext(Context)
+    const params = useParams();
+	useEffect(() => {
+        actions.getCharacters();
+    }, [])
+    console.log(store.characters[params.uid], "personajitos")
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
     <div className="card-body">
