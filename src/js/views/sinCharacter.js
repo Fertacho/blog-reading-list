@@ -6,17 +6,17 @@ import { Link, useParams } from "react-router-dom";
 export const Person = () => {
     
     const {store,actions} = useContext(Context)
-    const params = useParams();
+    const {uid} = useParams();
 	useEffect(() => {
-        actions.getPerson("https://www.swapi.tech/api/people/" + params.uid);
+        actions.getPerson("https://www.swapi.tech/api/people/" + uid);
         console.log(store.person,"personajitos")
     }, [])
 
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
     <div className="card-body">
-      <h5 className="card-title">Name:{store.person[params.uid]}</h5>
-      <p className="card-text">des</p>
+      <h5 className="card-title">Name:{store.person.name}</h5>
+      <p className="card-text">description:</p>
       <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
