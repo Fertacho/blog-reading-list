@@ -2,13 +2,14 @@ import React from "react";
 import { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
+import { number } from "prop-types";
 
 export const Person = () => {
     
     const {store,actions} = useContext(Context)
     const {uid} = useParams();
 	useEffect(() => {
-        actions.getPerson("https://www.swapi.tech/api/people/" + uid);
+        actions.getPerson("https://www.swapi.tech/api/people/" + Number (uid+1));
         console.log(store.person,"personajitos")
     }, [])
 
