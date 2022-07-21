@@ -9,9 +9,9 @@ export const Person = () => {
     const {store,actions} = useContext(Context)
     const {uid} = useParams();
 	useEffect(() => {
-        actions.getPerson("https://www.swapi.tech/api/people/" + Number (uid+1));
-        console.log(store.person,"personajitos")
+        actions.getPerson("https://www.swapi.tech/api/people/" + Number (uid+1));    
     }, [])
+    console.log(store.person,"personajitos")
 
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
