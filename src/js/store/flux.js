@@ -39,6 +39,20 @@ const getState = ({ getStore, getActions, setStore }) => {
   				.then(response => response.json())
   				.then(data =>{console.log("fetch individual",data.result),setStore({person:data.result.properties})})
   				.catch(error => console.log('error', error));
+			},
+			getPlanet: url =>{
+				const store = getStore();
+				fetch(url)
+  				.then(response => response.json())
+  				.then(data =>{console.log("fetch individual",data.result),setStore({planet:data.result.properties})})
+  				.catch(error => console.log('error', error));
+			},
+			getStarship: url =>{
+				const store = getStore();
+				fetch(url)
+  				.then(response => response.json())
+  				.then(data =>{console.log("fetch individual",data.result),setStore({starship:data.result.properties})})
+  				.catch(error => console.log('error', error));
 			}
 		}
 	};
