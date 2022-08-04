@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				fetch(url)
   				.then(response => response.json())
-  				.then(data =>{console.log("fetch individual",data.result),setStore({person:[...data]})})
+  				.then(data =>{console.log("fetch individual",data.result),setStore({person:data.result.properties})})
   				.catch(error => console.log('error', error));
 			}
 		}
