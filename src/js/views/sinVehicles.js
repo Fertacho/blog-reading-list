@@ -11,7 +11,7 @@ export const Starship = () => {
 	useEffect(() => {
         actions.getStarship("https://www.swapi.tech/api/starships/" + Number (uid+1));    
     }, [])
-    console.log(store.starship,"personajitos")
+    console.log(store.starship,"naves")
 
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
