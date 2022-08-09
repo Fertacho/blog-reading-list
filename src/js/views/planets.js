@@ -13,8 +13,13 @@ export const Planets = () => {
  return (
 	<div className="text-center row mt-5">
 		{store.planets.map((planets,index)=>{
-return <div className="card col-5"  key={index}><img src="..." className="card-img-top" alt="..."/><div className="card-body"><h5>{planets.name}</h5><button href="#" class="btn btn-primary">Go somewhere</button><button href="#" class="btn btn-warning">♡</button></div></div>
+	return <div className="card col-5"  key={index}>
+		<img src="..." className="card-img-top" alt="..."/>
+		<div className="card-body">
+			<h5>{planets.name}</h5>
+			<Link to={"/planet/" + planets.uid}>See in detail.</Link>
+			<button href="#" class="btn btn-warning">♡</button></div></div>
 		
-		})}
-	</div>
+			})}
+		</div>
 )};

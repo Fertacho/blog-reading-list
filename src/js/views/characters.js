@@ -17,7 +17,7 @@ export const Characters = () => {
 		<img src="..." className="card-img-top" alt="..."/>
 		<div className="card-body">
 			<h5>{characters.name}</h5>
-			<Link to={"/character/" + index}>See in detail.</Link>
+			<Link to={"/character/" + characters.uid}>See in detail.</Link>
 			<button href="#" className="btn btn-warning">♡</button>
 		</div>
 		</div>

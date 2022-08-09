@@ -13,45 +13,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			
 			getCharacters:()=>{
-				const store = getStore();
 				fetch("https://www.swapi.tech/api/people")
   				.then(response => response.json())
   				.then(result =>{console.log(result,"este es el fetch de personas"), setStore({characters:[...result.results]})})
   				.catch(error => console.log('error', error));
 			},
 			getPlanets:()=>{
-				const store = getStore();
 				fetch("https://www.swapi.tech/api/planets")
   				.then(response => response.json())
   				.then(result =>{console.log(result,"este es el fetch de planetas"), setStore({planets:[...result.results]})})
   				.catch(error => console.log('error', error));
 			},
 			getStarships:()=>{
-				const store = getStore();
 				fetch("https://www.swapi.tech/api/starships")
   				.then(response => response.json())
   				.then(result =>{console.log(result,"este es el fetch de vehiculos"), setStore({starships:[...result.results]})})
   				.catch(error => console.log('error', error));
 			},
 			getPerson: url =>{
-				const store = getStore();
 				fetch(url)
   				.then(response => response.json())
-  				.then(data =>{console.log("fetch individual",data.result),setStore({person:data.result.properties})})
+  				.then(data =>{console.log("fetch individual personas",data.result),setStore({person:data.result.properties})})
   				.catch(error => console.log('error', error));
 			},
 			getPlanet: url =>{
-				const store = getStore();
 				fetch(url)
   				.then(response => response.json())
-  				.then(data =>{console.log("fetch individual",data.result),setStore({planet:data.result.properties})})
+  				.then(data =>{console.log("fetch individual planetas",data.result),setStore({planet:data.result.properties})})
   				.catch(error => console.log('error', error));
 			},
 			getStarship: url =>{
-				const store = getStore();
 				fetch(url)
   				.then(response => response.json())
-  				.then(data =>{console.log("fetch individual",data.result),setStore({starship:data.result.properties})})
+  				.then(data =>{console.log("fetch individual starships ",data.result),setStore({starship:data.result.properties})})
   				.catch(error => console.log('error', error));
 			}
 		}

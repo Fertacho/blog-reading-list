@@ -6,10 +6,11 @@ import { number } from "prop-types";
 
 export const Person = () => {
     
-    const {store,actions} = useContext(Context)
+    const {store,actions} = useContext(Context);
     const {uid} = useParams();
+    
 	useEffect(() => {
-        actions.getPerson("https://www.swapi.tech/api/people/" + Number (uid+1));    
+        actions.getPerson("https://www.swapi.tech/api/people/" + (uid));    
     }, [])
     console.log(store.person,"personajitos")
 

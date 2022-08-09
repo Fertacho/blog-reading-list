@@ -6,10 +6,11 @@ import { number } from "prop-types";
 
 export const Planet = () => {
     
-    const {store,actions} = useContext(Context)
+    const {store,actions} = useContext(Context);
     const {uid} = useParams();
+
 	useEffect(() => {
-        actions.getPlanet("https://www.swapi.tech/api/planets/" + Number (uid+1));    
+        actions.getPlanet("https://www.swapi.tech/api/planets/" +  (uid));    
     }, [])
     console.log(store.planet,"planetas")
 

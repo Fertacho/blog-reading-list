@@ -8,8 +8,9 @@ export const Starship = () => {
     
     const {store,actions} = useContext(Context)
     const {uid} = useParams();
+
 	useEffect(() => {
-        actions.getStarship("https://www.swapi.tech/api/starships/" + Number (uid+1));    
+        actions.getStarship("https://www.swapi.tech/api/starships/" + uid);    
     }, [])
     console.log(store.starship,"naves")
 
