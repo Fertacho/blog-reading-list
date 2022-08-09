@@ -19,7 +19,7 @@ return <div className="card col-5"  key={index}>
 	<div className="card-body">
 		<h5>{starships.name}</h5>
 		<Link to={"/starship/" + starships.uid}>See in detail.</Link>
-		<button href="#" class="btn btn-warning">♡</button>
+		<button href="#" className="btn btn-warning">♡</button>
 		</div>
 		</div>
 		
