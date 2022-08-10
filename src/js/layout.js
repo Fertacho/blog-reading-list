@@ -13,6 +13,7 @@ import { Starships} from "./views/vehicles";
 import {Person} from "./views/sinCharacter";
 import { Planet } from "./views/sinPlanet";
 import { Starship } from "./views/sinVehicles";
+import {Favorites} from "./views/favorites";
 
 //create your first component
 const Layout = () => {
@@ -35,6 +36,7 @@ const Layout = () => {
 						<Route path={"/character/:uid"} component={Person}/>
 						<Route path={"/planet/:uid"} component={Planet}/>
 						<Route path={"/starship/:uid"} component={Starship}/>
+						<Route path={"/favorites"} component={Favorites}/>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

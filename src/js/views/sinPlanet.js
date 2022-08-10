@@ -17,9 +17,10 @@ export const Planet = () => {
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
     <div className="card-body">
-      <h5 className="card-title">Name: {!!store.planet && store.planet.name}</h5>
-      <p className="card-text"></p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    <h5>Name: {!!store.planet && store.planet.name}</h5>
+							<p>Climate: {!!store.planet && store.planet.climate}</p>
+							<p>Terrain: {!!store.planet && store.planet.terrain}</p>
+							<p>Population: {!!store.planet && store.planet.population}</p>
     </div>
   </div>
 }

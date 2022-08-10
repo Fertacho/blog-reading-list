@@ -17,9 +17,12 @@ export const Person = () => {
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
     <div className="card-body">
-      <h5 className="card-title">Name: {!!store.person && store.person.name}</h5>
-      <p className="card-text">Birth Year: {!!store.person && store.person.birth_year}</p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    <h5>Name: {!!store.person && store.person.name}</h5>
+							<p>Birth Year: {!!store.person && store.person.birth_year}</p>
+							<p>Sex: {!!store.person && store.person.gender}</p>
+							<p>Height: {!!store.person && store.person.height}</p>
+							<p>Skin Color: {!!store.person && store.person.skin_color}</p>
+							<p>Eye Color: {!!store.person && store.person.eye_color}</p>
     </div>
   </div>
 }

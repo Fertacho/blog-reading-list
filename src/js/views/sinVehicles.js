@@ -17,9 +17,10 @@ export const Starship = () => {
     return <div className="card mb-3">
     <img src="..." className="card-img-top" alt="..."/>
     <div className="card-body">
-      <h5 className="card-title">Name: {!!store.starship && store.starship.name}</h5>
-      <p className="card-text"></p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    <h5>Name: {!!store.starship && store.starship.name}</h5>
+							<p>Model: {!!store.starship && store.starship.model}</p>
+							<p>Vehicle Class: {!!store.starship && store.starship.starship_class}</p>
+							<p>Manufacturer: {!!store.starship && store.starship.manufacturer}</p>
     </div>
   </div>
 }
