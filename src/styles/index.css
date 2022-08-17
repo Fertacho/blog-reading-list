@@ -1,3 +1,12 @@
-/* 
-    General Styles
-*/
+body{
+    background-color: black;
+}
+h1{
+    color: yellow;
+}
+h5{
+    color: yellow;
+}
+p{
+    color:yellow;
+}

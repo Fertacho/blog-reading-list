@@ -14,8 +14,7 @@ export const Planet = () => {
     }, [])
     console.log(store.planet,"planetas")
 
-    return <div className="card mb-3">
-    <img src="..." className="card-img-top" alt="..."/>
+    return <div className="card bg-dark mb-3">
     <div className="card-body">
     <h5>Name: {!!store.planet && store.planet.name}</h5>
 							<p>Climate: {!!store.planet && store.planet.climate}</p>

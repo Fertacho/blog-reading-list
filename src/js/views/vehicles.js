@@ -14,8 +14,7 @@ export const Starships = () => {
  return (
 	<div className="text-center row mt-5">
 		{store.starships.map((starships,index)=>{
-return <div className="card col-5"  key={index}>
-	<img src="..." className="card-img-top" alt="..."/>
+return <div className="card bg-dark col-5"  key={index}>
 	<div className="card-body">
 		<h5>{starships.name}</h5>
 		<Link to={"/starship/" + starships.uid}>See in detail.</Link>

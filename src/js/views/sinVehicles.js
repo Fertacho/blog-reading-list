@@ -14,8 +14,7 @@ export const Starship = () => {
     }, [])
     console.log(store.starship,"naves")
 
-    return <div className="card mb-3">
-    <img src="..." className="card-img-top" alt="..."/>
+    return <div className="card bg-dark mb-3">
     <div className="card-body">
     <h5>Name: {!!store.starship && store.starship.name}</h5>
 							<p>Model: {!!store.starship && store.starship.model}</p>

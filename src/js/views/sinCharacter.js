@@ -14,8 +14,7 @@ export const Person = () => {
     }, [])
     console.log(store.person,"personajitos")
 
-    return <div className="card mb-3">
-    <img src="..." className="card-img-top" alt="..."/>
+    return <div className="card bg-dark mb-3">
     <div className="card-body">
     <h5>Name: {!!store.person && store.person.name}</h5>
 							<p>Birth Year: {!!store.person && store.person.birth_year}</p>
