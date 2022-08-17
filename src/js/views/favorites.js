@@ -19,7 +19,7 @@ export const Favorites = () => {
                             <div key={id} className="card bg-dark" style={{ width: '40rem' }}>
                                 <div className="col-12">
                                     <div className="card-body">
-                                        <h5 className="card-title">Name: {favorites}</h5>
+                                        <h5 className="card-title">{favorites}</h5>
                                         <button onClick={() => actions.deleteFavorite(id)}>
                                             {" "}
                                             X {" "}
