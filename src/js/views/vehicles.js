@@ -18,7 +18,7 @@ return <div className="card bg-dark col-5"  key={index}>
 	<div className="card-body">
 		<h5>{starships.name}</h5>
 		<Link to={"/starship/" + starships.uid}>See in detail.</Link>
-		<button href="#" className="btn btn-warning">♡</button>
+		<button href="#" className="btn btn-warning" onClick={() => actions.addFavorite(starships.name)}>♡</button>
 		</div>
 		</div>
 		

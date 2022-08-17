@@ -16,7 +16,7 @@ export const Favorites = () => {
                     {store.favorites.map((favorites, id) => {
 
                         return (
-                            <div key={id} className="card" style={{ width: '40rem' }}>
+                            <div key={id} className="card bg-dark" style={{ width: '40rem' }}>
                                 <div className="col-12">
                                     <div className="card-body">
                                         <h5 className="card-title">Name: {favorites}</h5>

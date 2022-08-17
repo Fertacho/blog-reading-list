@@ -17,7 +17,7 @@ export const Planets = () => {
 		<div className="card-body">
 			<h5>{planets.name}</h5>
 			<Link to={"/planet/" + planets.uid}>See in detail.</Link>
-			<button href="#" className="btn btn-warning">♡</button></div></div>
+			<button href="#" className="btn btn-warning" onClick={() => actions.addFavorite(planets.name)}>♡</button></div></div>
 		
 			})}
 		</div>
