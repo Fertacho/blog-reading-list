@@ -17,7 +17,7 @@ export const Characters = () => {
 		<div className="card-body">
 			<h5>{characters.name}</h5>
 			<Link to={"/character/" + characters.uid}>See in detail.</Link>
-			<button href="#" className="btn btn-warning">♡</button>
+			<button href="#" className="btn btn-warning" onClick={() => actions.addFavorite(people.name)}>♡</button>
 		</div>
 		</div>
 		})}

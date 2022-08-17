@@ -59,13 +59,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 	
 				   
 			   },
-			   filterFavorites: item => {
+			filterFavorites: item => {
 				const {favorites} = getStore();
 				   let filtered = favorites.filter((fav) => 
 					   fav !== item
 				   )
 				   setStore({favorites: filtered});
 			   },
+			addFavorite: item  => {
+                const {favorites} = getStore();
+                if(favorites.find((fav) => fav === item)){
+                    console.log('Found')
+                }else{
+				const newStore = getStore()
+                setStore({ favorites: [...newStore.favorites, item] })}			             
+			},
+		
+			deleteFavorite: index => {
+				const newStore = getStore();
+				var newFavorites = newStore.favorites.filter((item, ind) => index != ind);
+				setStore({ favorites: newFavorites });
+			}
 		}
 	};
 };
